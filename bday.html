@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy Birthday Ayush Bhiya!!!</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+	<script>
+		var images = [
+			"image1.gif",
+			"image2.gif",
+			"image3.gif",
+			"image4.gif"
+		];
+
+		var currentIndex = 0;
+
+		function changeImage() {
+			var img = document.getElementById("slideshow");
+			img.src = images[currentIndex];
+			currentIndex++;
+			if (currentIndex == images.length) {
+				currentIndex = 0;
+			}
+			setTimeout("changeImage()", 2000);
+		}
+	</script>
+</head>
+<body onload="changeImage()">
+	<h1>HAPPY BIRTHDAY AYUSH BHIYA!!!</h1>
+	<img id="slideshow" src="image1.jpg" alt="slideshow">
+</body>
+</html>
